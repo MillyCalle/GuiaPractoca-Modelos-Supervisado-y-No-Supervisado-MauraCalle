@@ -23,7 +23,7 @@ from sklearn.cluster import KMeans
 
 
 @st.cache_data
-def cargar_datos(ruta_csv: str = "data/academic_performance_master.csv") -> pd.DataFrame:
+def cargar_datos(ruta_csv = "Proyecto_Notas_ML/data/academic_performance_master.csv") -> pd.DataFrame:
     # El header real está en la fila 3 (como en tu notebook)
     df = pd.read_csv(ruta_csv, header=3)
 
@@ -362,4 +362,5 @@ st.markdown("""
 <div style="text-align: center; color: #64748b; padding: 1rem;">
     <p><strong>Sistema de Análisis de Rendimiento Académico</strong> | Desarrollado con Streamlit | Realizado por: Maura Calle 🎈</p>
 </div>
+
 """, unsafe_allow_html=True)
